@@ -1,0 +1,8 @@
+Link for coco.names:
+wget https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names
+
+Link for Yolo Weight and Config File:
+
+https://pjreddie.com/darknet/yolo/
+wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg
+
