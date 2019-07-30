@@ -7,7 +7,8 @@ import time
 arg = argparse.ArgumentParser()
 arg.add_argument("-i","--image",required=True,help="path to input image")
 # arg.add_argument("-n","--name",required=True)
-arg.add_argument("-y","--yolo",required=True,help="path to YOLO directory")
+arg.add_argument("-y","--yolo",required=True,
+	help="path to YOLO directory")
 arg.add_argument("-c","--confidence",type=float,default=0.5,help="minimum probability to filter weak detections")
 arg.add_argument("-t","--threshold",type=float,default=0.3,help="threshold when applying non-maxima supression")
 args = vars(arg.parse_args()) # Return a Dict 
@@ -87,8 +88,8 @@ for output in layerOutput:
 			boxes.append([x,y,int(wt),int(ht)])
 			confidences.append(float(confidence))
 			class_names.append(class_name)
-#Applying non-maxima supression to surpass weak boundry boxes
-# NMS also ensures that we do not have any redundant or extraneous bounding boxes.
+	#Applying non-maxima supression to surpass weak boundry boxes
+	# NMS also ensures that we do not have any redundant or extraneous bounding boxes.
 idxs = cv2.dnn.NMSBoxes(boxes, confidences, args["confidence"], args["threshold"])
 
 #Ensuring Atleast one detection exists
