@@ -36,7 +36,7 @@ Keras-Preprocessing==1.1.0
 kiwisolver==1.1.0
 labelImg==1.8.3
 lazy-object-proxy==1.4.1
-lxml==4.3.4
+lxml==4.6.5
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==3.1.0
